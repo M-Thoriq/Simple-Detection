@@ -15,6 +15,9 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage: {
+                'blur' : "url('/public/bgblurr.jpg')"
+            }
         },
     },
 
