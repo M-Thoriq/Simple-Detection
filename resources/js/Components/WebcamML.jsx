@@ -25,6 +25,7 @@ function drawRect(obj, ctx){
         // rectMode(RADIUS);
         ctx.fillText(text, x, y-5);
         ctx.rect(x, y, width, height, 50);
+
         ctx.stroke()
     });
 }
@@ -53,7 +54,7 @@ export default function WebcamML(className) {
         const predictionDiv = document.createElement('div');
         // Score Bar Color if >=85% bg-green-500 and if >=70% bg-yellow-500 else bg-red-500
         const scoreBarColor = predictionScore >= 0.85 ? 'bg-green-500' : predictionScore >= 0.70 ? 'bg-yellow-500' : 'bg-red-500';
-        predictionDiv.className = 'w-full h-fit last:outline-dashed last:outline-4 outline-blue-400 last:scale-105 scale-90 bg-white bg-opacity-70 rounded-md p-2';
+        predictionDiv.className = 'w-full h-fit last:outline last:outline-4 outline-green-950 last:scale-105 last:mb-2 scale-90 bg-white bg-opacity-70 rounded-md p-2';
         predictionDiv.innerHTML = `
 
           <p class='first-letter:uppercase'><b>${predictionClass}</b></p>
@@ -130,7 +131,7 @@ export default function WebcamML(className) {
               className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 mx-auto rounded-xl'
               />
           </div>
-          <div className='fixed max-h-[480px] min-h-[480px] noscroll w-60 overflow-y-scroll p-4 rounded-xl z-50 top-1/2 -translate-y-1/2 right-[10%]'>
+          <div className='fixed max-h-[480px] min-h-[480px] noscroll w-60 overflow-y-scroll p-4 rounded-xl z-50 top-1/2 -translate-y-1/2 right-[5%]'>
               <h1 className='text-black font-bold text-xl text-center'></h1>
               <div className='flex flex-col-reverse gap-1.5' id='predictions'>
 
