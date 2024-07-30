@@ -3,7 +3,6 @@ import * as tfmodel from '@tensorflow-models/coco-ssd';
 import React from 'react';
 import Webcam from 'react-webcam';
 import { useRef, useState, useEffect } from "react";
-// Import client side react
 
 
 
@@ -119,7 +118,7 @@ export default function WebcamML(className) {
       return (
         <>
         <div className='h-screen flex justify-center place-content-center bg-blur bg-cover'>
-          <div id='webcamvideo' className={'relative h-full w-full items-center' + className}>
+          <div id='webcamvideo' className={'relative h-full w-full items-center shadow-md ' + className}>
               <Webcam
               ref={webcamRef}
               muted={true} 
@@ -131,7 +130,7 @@ export default function WebcamML(className) {
               className='absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 mx-auto rounded-xl'
               />
           </div>
-          <div className='fixed max-h-[480px] min-h-[480px] noscroll w-60 overflow-y-scroll p-4 rounded-xl z-50 top-1/2 -translate-y-1/2 right-[5%]'>
+          <div id='history' className='fixed max-h-[480px] min-h-[480px] noscroll w-60 overflow-y-scroll p-4 rounded-xl z-50 top-1/2 -translate-y-1/2 right-[5%]'>
               <h1 className='text-black font-bold text-xl text-center'></h1>
               <div className='flex flex-col-reverse gap-1.5' id='predictions'>
 

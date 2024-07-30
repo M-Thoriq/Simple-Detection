@@ -22,6 +22,7 @@
     "dependencies": {
         "@tensorflow-models/coco-ssd": "^2.2.3",
         "@tensorflow/tfjs": "^4.20.0",
+        "framer-motion": "^11.3.19",
         "react-webcam": "^7.2.0"
     }
 }

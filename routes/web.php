@@ -19,3 +19,7 @@ use Inertia\Inertia;
 Route::get('/', function(){
     return Inertia::render('ML');
 });
+
+Route::get('/components', function(){
+    return Inertia::render('Components');
+});
